@@ -15,7 +15,10 @@ fh = open(fname)
 for line in fh:
     if not line.startswith('From: ') : continue
     # Your code there
+    pieces = line.split()
+    email = pieces[1]
     # Get domain name - org variable
+    org=email[email.find('@'):]
     print org
     cur.execute('SELECT count FROM Counts WHERE email = ? ', (org, ))
     row = cur.fetchone()
