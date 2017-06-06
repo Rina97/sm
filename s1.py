@@ -44,5 +44,6 @@ print "Counts:"
 for row in cur.execute(sqlstr) :
     # Your code there
     # Print domain and count
+    print str(row[0])+' ' +str(row[1])
 
 cur.close()
