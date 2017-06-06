@@ -37,7 +37,7 @@ for line in fh:
 # Your code there
 # Make your sql request - get top 10 rows ordered by count
 # sqlstr = 'SELECT ... '
-sqlstr = ''
+sqlstr = 'SELECT email,count FROM Counts ORDER BY count DESC LIMIT 10'
 
 print
 print "Counts:"
